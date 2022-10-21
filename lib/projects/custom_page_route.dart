@@ -26,3 +26,12 @@ class _CustomPageRouteState extends State<CustomPageRoute> {
         ));
   }
 }
+
+Route _createRoute() {
+  return PageRouteBuilder(
+    pageBuilder: (context, animation, secondaryAnimation) => CustomPageRoute2(),
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      return child;
+    },
+  );
+}
