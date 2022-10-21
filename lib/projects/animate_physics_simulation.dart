@@ -24,6 +24,8 @@ class PhysicsCardDragDemo extends StatelessWidget {
 class DraggableCard extends StatefulWidget {
   const DraggableCard({super.key, required FlutterLogo child});
 
+  final Widget child; 
+
   @override
   State<DraggableCard> createState() => _DraggableCardState();
 }
@@ -31,6 +33,12 @@ class DraggableCard extends StatefulWidget {
 class _DraggableCardState extends State<DraggableCard>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
+
+
+  // STEP 2:  Move the widget using gestures
+
+  Alignment _dragAlignment = Alignment.center; 
+
   @override
   void initState() {
     super.initState();
@@ -46,6 +54,8 @@ class _DraggableCardState extends State<DraggableCard>
 
   @override
   Widget build(BuildContext context) {
-    return const Align(child: Card());
+    return const Align(child: Card(
+      child: widget.child, 
+    ));
   }
 }
