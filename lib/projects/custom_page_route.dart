@@ -65,3 +65,9 @@ Route _createRoute() {
     },
   );
 }
+
+// DISCLAIMER: The following values happens in computed order , 1. the animation(provides to the transitionsBuilder callback) produces values from 0 to 1.    2. The CurveTween maps those values to new values between 0 and 1 based on its curve.    3. The Tween<Offset> maps teh double values to teh Offset values. 
+
+
+// Another way to create an Animation<Offset> with an easing curve is to use a CurvedAnimation.
+// final tween = Tween(begin: begin, end: end); final curvedAnimaiton = CurvedAnimation(parent: animation, curve:curve, ); return SlideTransition(position: tween.animate(curvedAnimation), child: child, ); 
