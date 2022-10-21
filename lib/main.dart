@@ -1,3 +1,4 @@
+import 'package:cookbook_animation/projects/animate_physics_simulation.dart';
 import 'package:flutter/material.dart';
 
 import 'projects/custom_page_route.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const CustomPageRoute(),
+      home: const PhysicsCardDragDemo(),
     );
   }
 }
