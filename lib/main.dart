@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      
+      debugShowCheckedBanner: false, 
       title: 'Cookbook Animation',
       theme: ThemeData(
         primarySwatch: Colors.blue,
