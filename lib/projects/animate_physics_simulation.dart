@@ -28,20 +28,24 @@ class DraggableCard extends StatefulWidget {
   State<DraggableCard> createState() => _DraggableCardState();
 }
 
-class _DraggableCardState extends State<DraggableCard> {
+class _DraggableCardState extends State<DraggableCard>
+    with SingleTickerProviderStateMixin {
+  late AnimationController _controller;
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
+    _controller =
+        AnimationController(vsync: this, duration: const Duration(seconds: 1));
   }
 
   @override
   void dispose() {
+    _controller.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return const Align(child: Card());
   }
 }
