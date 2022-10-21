@@ -13,14 +13,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedBanner: false, 
+      debugShowCheckedModeBanner: false,
       title: 'Cookbook Animation',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-    
       home: const CustomPageRoute(),
-    
     );
   }
 }
